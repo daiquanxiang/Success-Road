@@ -145,7 +145,7 @@ static const NSInteger kHotLeagueBaseViewBeginTag = 500;
         [_topListArray removeAllObjects];
         for (int i=0; i<10; i++) {
             NewsCategoryModel *category = [[NewsCategoryModel alloc] init];
-            category.categoryName = [NSString stringWithFormat:@"分类%d",i];
+            category.categoryName = (i%2)?[NSString stringWithFormat:@"分类%d",i]:[NSString stringWithFormat:@"分类名字长%d",i];
             category.typeId = [NSNumber numberWithInteger:i+1000];
             category.objectId = [NSString stringWithFormat:@"%d",i+2000];
             [_topListArray addObject:category];

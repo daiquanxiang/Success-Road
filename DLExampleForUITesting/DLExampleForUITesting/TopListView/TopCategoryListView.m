@@ -90,7 +90,7 @@ static const NSInteger kLayerTag = 400;
     _backgroundScrollView.backgroundColor = [UIColor clearColor];
     _backgroundScrollView.frame = CGRectMake(kLeftEdge, 0, _screenWidth - kLeftEdge - (_isHideSearchBar?kLeftEdge:kSearchButtonNeedWidth), _selfHeight);
     _backgroundScrollView.showsHorizontalScrollIndicator = NO;
-    
+    _backgroundScrollView.scrollsToTop = NO;
     // singleTouch
     if (!_singleRecognizer) {
         _singleRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(nameSingleTouch:)];
@@ -217,6 +217,9 @@ static const NSInteger kLayerTag = 400;
     CGPoint point = [gesture locationInView:_backgroundScrollView];
     _isPanSelf = YES;
     _currentIndex = [self currentIndexWithLocation:point];
+    if (_currentIndex >= _list.count) {
+        return;
+    }
     if (point.x > _lastLocation.x) {
         [self moveToRight];
         _lastLocation = point;
@@ -444,7 +447,6 @@ static const NSInteger kLayerTag = 400;
     if (!_labelLayer) {
         _labelLayer = [[CALayer alloc] init];
         [_backgroundScrollView.layer addSublayer:_labelLayer];
-//        _labelLayer.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:.2f].CGColor;
         _labelLayer.frame = CGRectMake(0, 0, kLayerWidth, _selfHeight);
     }
     
@@ -454,9 +456,14 @@ static const NSInteger kLayerTag = 400;
         _currentPage = 0;
     }
     CGFloat restDistance = offset.x - _currentPage*_screenWidth;
-    UIView *label = [_backgroundScrollView viewWithTag:_currentPage+kNameLabelBeginTag];
-    frame.origin.x = ceil(label.frame.origin.x + _labelLayer.frame.size.width/_screenWidth*restDistance);
-    frame.size.width = [self getLayerWidthWithOriginX:frame.origin.x];
+//    NSLog([NSString stringWithFormat:@"%f",restDistance]);
+//    NSLog(@"rest :%f",restDistance);
+//    NSLog(@"page :%ld",(long)_currentPage);
+    NSInteger tag = _currentPage + kNameLabelBeginTag;
+    UIView *label = [_backgroundScrollView viewWithTag:tag];
+    CGFloat percent = (restDistance*1.0f) / _screenWidth;
+    frame.origin.x = ceil(label.frame.origin.x + CGRectGetWidth(label.frame)*percent);
+    frame.size.width = [self getLayerWidthWithCurrentTag:tag currentPercent:percent];
     _labelLayer.frame = frame;
     [self nameLabelTextLayerWithFrame:frame];
 }
@@ -498,19 +505,30 @@ static const NSInteger kLayerTag = 400;
     _maxTextLayer.layer.masksToBounds = YES;
 }
 
--(CGFloat) getLayerWidthWithOriginX:(CGFloat) originX
+-(CGFloat) getLayerWidthWithCurrentTag:(NSInteger) tag currentPercent:(CGFloat) percent
 {
-    originX -= kLeftEdge;
-    if (originX<0) {
-        //first one
-        UIView *view = [_backgroundScrollView viewWithTag:0+kNameLabelBeginTag];
-        return view.frame.size.width-2*kOneNameLeftRightEdge;
+    UIView *label = [_backgroundScrollView viewWithTag:tag];
+    CGFloat layerWidth = 0.f;
+    NSInteger leftTag = tag - 1;
+    NSInteger rightTag = tag + 1;
+    if (percent == 0) {
+        return CGRectGetWidth(label.frame);
     }
-    // last one
-    // else
-    NSInteger index = [self currentIndexWithLocation:CGPointMake(originX, 0)];
-    UIView *view = [_backgroundScrollView viewWithTag:index+kNameLabelBeginTag];
-    return view.frame.size.width;
+    else if (percent < 0)
+    {
+        percent = MAX(-1, percent);
+        UIView *leftLabel = [_backgroundScrollView viewWithTag:leftTag];
+        CGFloat currentPercent = 1 + percent;
+        layerWidth = currentPercent * CGRectGetWidth(label.frame) - percent * CGRectGetWidth(leftLabel.frame);
+    }
+    else
+    {
+        percent = MIN(1, percent);
+        UIView *rightLabel = [_backgroundScrollView viewWithTag:rightTag];
+        CGFloat currentPercent = 1 - percent;
+        layerWidth = currentPercent * CGRectGetWidth(label.frame) + percent * CGRectGetWidth(rightLabel.frame);
+    }
+    return layerWidth;
 }
 
 -(void) layerWillBeginDragging
