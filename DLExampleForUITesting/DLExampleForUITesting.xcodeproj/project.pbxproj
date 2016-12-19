@@ -19,6 +19,12 @@
 		CE153AAF1BC91A28004A3028 /* footballfield@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE153AAD1BC91A28004A3028 /* footballfield@3x.jpg */; };
 		CE229E761C7620180012AC95 /* DLCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = CE229E751C7620180012AC95 /* DLCircleProgress.m */; };
 		CE229E791C7620570012AC95 /* CircleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE229E781C7620570012AC95 /* CircleProgressViewController.m */; };
+		CE325CE31E04DB6000FB8490 /* DragCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE325CE21E04DB6000FB8490 /* DragCardView.m */; };
+		CE325CE61E04E70300FB8490 /* team_logo_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE325CE41E04E70300FB8490 /* team_logo_default@2x.png */; };
+		CE325CE71E04E70300FB8490 /* team_logo_default@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE325CE51E04E70300FB8490 /* team_logo_default@3x.png */; };
+		CE325CEA1E0590A400FB8490 /* DragViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE325CE91E0590A400FB8490 /* DragViewController.m */; };
+		CE325CED1E06947100FB8490 /* teams_addmy_ic_delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE325CEB1E06947100FB8490 /* teams_addmy_ic_delete@3x.png */; };
+		CE325CEE1E06947100FB8490 /* teams_addmy_ic_delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE325CEC1E06947100FB8490 /* teams_addmy_ic_delete@2x.png */; };
 		CE38D3631D912F1A006F3FB4 /* RCLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE38D3621D912F1A006F3FB4 /* RCLabel.m */; };
 		CE3FADAC1D757416000B1923 /* MyAddViewTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3FADAB1D757416000B1923 /* MyAddViewTableView.m */; };
 		CE481A901BE32CF500908986 /* header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE481A8F1BE32CF500908986 /* header.jpg */; };
@@ -80,6 +86,14 @@
 		CE229E751C7620180012AC95 /* DLCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCircleProgress.m; sourceTree = "<group>"; };
 		CE229E771C7620570012AC95 /* CircleProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressViewController.h; sourceTree = "<group>"; };
 		CE229E781C7620570012AC95 /* CircleProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressViewController.m; sourceTree = "<group>"; };
+		CE325CE11E04DB6000FB8490 /* DragCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragCardView.h; sourceTree = "<group>"; };
+		CE325CE21E04DB6000FB8490 /* DragCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragCardView.m; sourceTree = "<group>"; };
+		CE325CE41E04E70300FB8490 /* team_logo_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team_logo_default@2x.png"; sourceTree = "<group>"; };
+		CE325CE51E04E70300FB8490 /* team_logo_default@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team_logo_default@3x.png"; sourceTree = "<group>"; };
+		CE325CE81E0590A400FB8490 /* DragViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragViewController.h; sourceTree = "<group>"; };
+		CE325CE91E0590A400FB8490 /* DragViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragViewController.m; sourceTree = "<group>"; };
+		CE325CEB1E06947100FB8490 /* teams_addmy_ic_delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "teams_addmy_ic_delete@3x.png"; sourceTree = "<group>"; };
+		CE325CEC1E06947100FB8490 /* teams_addmy_ic_delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "teams_addmy_ic_delete@2x.png"; sourceTree = "<group>"; };
 		CE38D3611D912F1A006F3FB4 /* RCLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLabel.h; sourceTree = "<group>"; };
 		CE38D3621D912F1A006F3FB4 /* RCLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLabel.m; sourceTree = "<group>"; };
 		CE3FADAA1D757416000B1923 /* MyAddViewTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAddViewTableView.h; sourceTree = "<group>"; };
@@ -161,6 +175,7 @@
 		CE0FEADE1BAE634F0095B710 /* DLExampleForUITesting */ = {
 			isa = PBXGroup;
 			children = (
+				CE325CE01E04DB2E00FB8490 /* DragViews */,
 				CE38D3601D912F1A006F3FB4 /* RichContentLabel */,
 				CE6E04E01BFF35DC00B4F79F /* PlayGif */,
 				CE153AAB1BC91A28004A3028 /* image */,
@@ -237,6 +252,21 @@
 				CE229E781C7620570012AC95 /* CircleProgressViewController.m */,
 			);
 			path = CircleProgressView;
+			sourceTree = "<group>";
+		};
+		CE325CE01E04DB2E00FB8490 /* DragViews */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CEB1E06947100FB8490 /* teams_addmy_ic_delete@3x.png */,
+				CE325CEC1E06947100FB8490 /* teams_addmy_ic_delete@2x.png */,
+				CE325CE41E04E70300FB8490 /* team_logo_default@2x.png */,
+				CE325CE51E04E70300FB8490 /* team_logo_default@3x.png */,
+				CE325CE11E04DB6000FB8490 /* DragCardView.h */,
+				CE325CE21E04DB6000FB8490 /* DragCardView.m */,
+				CE325CE81E0590A400FB8490 /* DragViewController.h */,
+				CE325CE91E0590A400FB8490 /* DragViewController.m */,
+			);
+			path = DragViews;
 			sourceTree = "<group>";
 		};
 		CE38D3601D912F1A006F3FB4 /* RichContentLabel */ = {
@@ -368,6 +398,7 @@
 				TargetAttributes = {
 					CE0FEADB1BAE634F0095B710 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = L94FR997ZV;
 					};
 					CE0FEAF41BAE634F0095B710 = {
 						CreatedOnToolsVersion = 7.0;
@@ -405,9 +436,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE153AAE1BC91A28004A3028 /* footballfield@2x.jpg in Resources */,
+				CE325CED1E06947100FB8490 /* teams_addmy_ic_delete@3x.png in Resources */,
 				CE0FEAEF1BAE634F0095B710 /* LaunchScreen.storyboard in Resources */,
 				CE481A901BE32CF500908986 /* header.jpg in Resources */,
+				CE325CE61E04E70300FB8490 /* team_logo_default@2x.png in Resources */,
 				CE0FEAEC1BAE634F0095B710 /* Assets.xcassets in Resources */,
+				CE325CE71E04E70300FB8490 /* team_logo_default@3x.png in Resources */,
 				CE6E04E71BFF35DC00B4F79F /* 挥旗公仔1-02.gif in Resources */,
 				CEB704B71C71C33600A6BC90 /* searchLogo@2x.png in Resources */,
 				CEB704B81C71C33600A6BC90 /* searchLogo@3x.png in Resources */,
@@ -415,6 +449,7 @@
 				CEB704B51C71C33600A6BC90 /* bottomArrow@2x.png in Resources */,
 				CE153AAF1BC91A28004A3028 /* footballfield@3x.jpg in Resources */,
 				CEB704B61C71C33600A6BC90 /* bottomArrow@3x.png in Resources */,
+				CE325CEE1E06947100FB8490 /* teams_addmy_ic_delete@2x.png in Resources */,
 				CE6E04E61BFF35DC00B4F79F /* 挥旗公仔1-01.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,12 +485,14 @@
 				CEA7EE941CFB3F0500CDC16F /* UIButton+MyObserver.m in Sources */,
 				CE0FEAE41BAE634F0095B710 /* AppDelegate.m in Sources */,
 				CE6E04E51BFF35DC00B4F79F /* SCGIFImageView.m in Sources */,
+				CE325CEA1E0590A400FB8490 /* DragViewController.m in Sources */,
 				CE229E761C7620180012AC95 /* DLCircleProgress.m in Sources */,
 				CE8785C51BFC202D00FE91B6 /* TranslucentView.m in Sources */,
 				CE3FADAC1D757416000B1923 /* MyAddViewTableView.m in Sources */,
 				CE0FEAE11BAE634F0095B710 /* main.m in Sources */,
 				CEB704A91C7073BA00A6BC90 /* CatologViewController.m in Sources */,
 				CE38D3631D912F1A006F3FB4 /* RCLabel.m in Sources */,
+				CE325CE31E04DB6000FB8490 /* DragCardView.m in Sources */,
 				CEB704B01C71BE4200A6BC90 /* TopCategoryListView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +632,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L94FR997ZV;
 				INFOPLIST_FILE = DLExampleForUITesting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -607,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L94FR997ZV;
 				INFOPLIST_FILE = DLExampleForUITesting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

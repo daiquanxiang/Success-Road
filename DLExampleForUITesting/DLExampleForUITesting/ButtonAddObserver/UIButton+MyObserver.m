@@ -39,7 +39,7 @@
 
 -(void) addMyObserver
 {
-    [self addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew context:NULL];
+    //[self addObserver:self forKeyPath:@"highlighted" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 #pragma mark KVO
@@ -76,7 +76,7 @@
 
 -(void) dealloc
 {
-    [self removeObserver:self forKeyPath:@"highlighted"];
+    //[self removeObserver:self forKeyPath:@"highlighted"];
 }
 
 
