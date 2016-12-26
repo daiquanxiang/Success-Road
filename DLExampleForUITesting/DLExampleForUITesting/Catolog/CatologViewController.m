@@ -6,7 +6,7 @@
 //  Copyright © 2016年 David. All rights reserved.
 //
 
-#define kCatologNamesArray @[@"ViewController",@"TopScrollViewController",@"CircleProgressViewController",@"SpiderNetViewController",@"DragViewController"]
+#define kCatologNamesArray @[@"ViewController",@"TopScrollViewController",@"CircleProgressViewController",@"SpiderNetViewController",@"DragViewController",@"ShowBannerViewController"]
 
 #import "CatologViewController.h"
 

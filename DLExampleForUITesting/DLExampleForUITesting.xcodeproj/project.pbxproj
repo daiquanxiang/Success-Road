@@ -17,6 +17,10 @@
 		CE0FEB051BAE634F0095B710 /* DLExampleForUITestingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0FEB041BAE634F0095B710 /* DLExampleForUITestingUITests.m */; };
 		CE153AAE1BC91A28004A3028 /* footballfield@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE153AAC1BC91A28004A3028 /* footballfield@2x.jpg */; };
 		CE153AAF1BC91A28004A3028 /* footballfield@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE153AAD1BC91A28004A3028 /* footballfield@3x.jpg */; };
+		CE1717861E0CFEFD00906BFE /* CircleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1717851E0CFEFD00906BFE /* CircleScrollView.m */; };
+		CE1717891E0CFFB400906BFE /* ScrollDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1717881E0CFFB400906BFE /* ScrollDotView.m */; };
+		CE17178C1E0D062B00906BFE /* NSTimer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17178B1E0D062B00906BFE /* NSTimer+Addition.m */; };
+		CE17178F1E0D0C4500906BFE /* ShowBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE17178E1E0D0C4500906BFE /* ShowBannerViewController.m */; };
 		CE229E761C7620180012AC95 /* DLCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = CE229E751C7620180012AC95 /* DLCircleProgress.m */; };
 		CE229E791C7620570012AC95 /* CircleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE229E781C7620570012AC95 /* CircleProgressViewController.m */; };
 		CE325CE31E04DB6000FB8490 /* DragCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE325CE21E04DB6000FB8490 /* DragCardView.m */; };
@@ -82,6 +86,14 @@
 		CE0FEB061BAE634F0095B710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE153AAC1BC91A28004A3028 /* footballfield@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "footballfield@2x.jpg"; sourceTree = "<group>"; };
 		CE153AAD1BC91A28004A3028 /* footballfield@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "footballfield@3x.jpg"; sourceTree = "<group>"; };
+		CE1717841E0CFEFD00906BFE /* CircleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleScrollView.h; sourceTree = "<group>"; };
+		CE1717851E0CFEFD00906BFE /* CircleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleScrollView.m; sourceTree = "<group>"; };
+		CE1717871E0CFFB400906BFE /* ScrollDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollDotView.h; sourceTree = "<group>"; };
+		CE1717881E0CFFB400906BFE /* ScrollDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollDotView.m; sourceTree = "<group>"; };
+		CE17178A1E0D062B00906BFE /* NSTimer+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Addition.h"; sourceTree = "<group>"; };
+		CE17178B1E0D062B00906BFE /* NSTimer+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Addition.m"; sourceTree = "<group>"; };
+		CE17178D1E0D0C4500906BFE /* ShowBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowBannerViewController.h; sourceTree = "<group>"; };
+		CE17178E1E0D0C4500906BFE /* ShowBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowBannerViewController.m; sourceTree = "<group>"; };
 		CE229E741C7620180012AC95 /* DLCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLCircleProgress.h; sourceTree = "<group>"; };
 		CE229E751C7620180012AC95 /* DLCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLCircleProgress.m; sourceTree = "<group>"; };
 		CE229E771C7620570012AC95 /* CircleProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressViewController.h; sourceTree = "<group>"; };
@@ -175,6 +187,7 @@
 		CE0FEADE1BAE634F0095B710 /* DLExampleForUITesting */ = {
 			isa = PBXGroup;
 			children = (
+				CE1717831E0CFEAB00906BFE /* CircleScrollView */,
 				CE325CE01E04DB2E00FB8490 /* DragViews */,
 				CE38D3601D912F1A006F3FB4 /* RichContentLabel */,
 				CE6E04E01BFF35DC00B4F79F /* PlayGif */,
@@ -241,6 +254,21 @@
 				CE153AAD1BC91A28004A3028 /* footballfield@3x.jpg */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		CE1717831E0CFEAB00906BFE /* CircleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				CE1717841E0CFEFD00906BFE /* CircleScrollView.h */,
+				CE1717851E0CFEFD00906BFE /* CircleScrollView.m */,
+				CE1717871E0CFFB400906BFE /* ScrollDotView.h */,
+				CE1717881E0CFFB400906BFE /* ScrollDotView.m */,
+				CE17178A1E0D062B00906BFE /* NSTimer+Addition.h */,
+				CE17178B1E0D062B00906BFE /* NSTimer+Addition.m */,
+				CE17178D1E0D0C4500906BFE /* ShowBannerViewController.h */,
+				CE17178E1E0D0C4500906BFE /* ShowBannerViewController.m */,
+			);
+			path = CircleScrollView;
 			sourceTree = "<group>";
 		};
 		CE229E731C7620180012AC95 /* CircleProgressView */ = {
@@ -488,9 +516,13 @@
 				CE325CEA1E0590A400FB8490 /* DragViewController.m in Sources */,
 				CE229E761C7620180012AC95 /* DLCircleProgress.m in Sources */,
 				CE8785C51BFC202D00FE91B6 /* TranslucentView.m in Sources */,
+				CE1717861E0CFEFD00906BFE /* CircleScrollView.m in Sources */,
 				CE3FADAC1D757416000B1923 /* MyAddViewTableView.m in Sources */,
+				CE17178F1E0D0C4500906BFE /* ShowBannerViewController.m in Sources */,
 				CE0FEAE11BAE634F0095B710 /* main.m in Sources */,
+				CE17178C1E0D062B00906BFE /* NSTimer+Addition.m in Sources */,
 				CEB704A91C7073BA00A6BC90 /* CatologViewController.m in Sources */,
+				CE1717891E0CFFB400906BFE /* ScrollDotView.m in Sources */,
 				CE38D3631D912F1A006F3FB4 /* RCLabel.m in Sources */,
 				CE325CE31E04DB6000FB8490 /* DragCardView.m in Sources */,
 				CEB704B01C71BE4200A6BC90 /* TopCategoryListView.m in Sources */,
